@@ -20,6 +20,7 @@ bool cmdOptionExists(char** begin, char** end, const std::string& option) {
 
 int main(int argc, char** argv) {
     // Print out Basic information about the assembler
+    /*
     if (cmdOptionExists(argv, argv + argc, "-h")) {
         std::cout << "This is a simple assembler for LC-3." << std::endl << std::endl;
         std::cout << "\e[1mUsage\e[0m" << std::endl;
@@ -69,7 +70,14 @@ int main(int argc, char** argv) {
         // * With hex mode, the result file is shown in hex
         SetHexMode(true);
     }
-
+    */
+    //debug用代码
+    string input_filename;
+    string output_filename;
+    cout << "请输入input_filename：" << endl;
+    cin >> input_filename;
+    cout << "请输入output_filename：" << endl;
+    cin >> output_filename;
     auto ass = assembler();
     auto status = ass.assemble(input_filename, output_filename);
 
